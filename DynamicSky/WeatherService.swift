@@ -9,14 +9,12 @@ public final class WeatherService: NSObject {
     public override init(){
         super.init()
         locationManager.delegate = self
-        
     }
     
     func loadWeatherData(_ completionHandler: @escaping ((OpenSkyResponse)-> Void)){
         self.completionHandler = completionHandler
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
+        locationManager.requestLocation()
     }
     
     private func makeDataRequest(forCoordinates coordinates: CLLocationCoordinate2D){
@@ -26,9 +24,7 @@ public final class WeatherService: NSObject {
         
         URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             
-            guard error == nil, let data = data else {
-                
-                return }
+            guard error == nil, let data = data else { return }
             
             if let response = try? JSONDecoder().decode(OpenSkyResponse.self, from: data) {
                 print("[SUCCESS] RESPONSE RECEIVED \(response.daily.count)")
@@ -38,13 +34,25 @@ public final class WeatherService: NSObject {
     }
 }
 
+//extension WeatherService: CLLocationManagerDelegate {
+//    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        guard let location = locations.first else { return }
+//        makeDataRequest(forCoordinates: location.coordinate)
+//    }
+//}
+//
+//public func locationManager(_ main: CLLocationManager, didFailWithError error: Error){
+//    print("[Error] locationManager \(error.localizedDescription)")
+//}
+
 extension WeatherService: CLLocationManagerDelegate {
+    
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         makeDataRequest(forCoordinates: location.coordinate)
     }
-}
-
-public func locationManager(_ main: CLLocationManager, didFailWithError error: Error){
-    print("[Error] locationManager \(error.localizedDescription)")
+    
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
 }

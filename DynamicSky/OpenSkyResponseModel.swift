@@ -1,23 +1,5 @@
 import Foundation
 
-//public struct Weather {
-//    let city: String
-//    let temperature: String
-//    let description: String
-//    let iconName: String
-//
-//    init(response: APIResponse) {
-//
-//        city = response.name
-//        temperature = "\(Int(response.main.temp))"
-//        description = response.weather.first?.description ?? ""
-//        iconName = response.weather.first?.iconName ?? ""
-//
-//    }
-//}
-
-import Foundation
-
 struct OpenSkyResponse: Codable {
     var lat, lon: Double
     var timezone: String
@@ -25,7 +7,7 @@ struct OpenSkyResponse: Codable {
     var current: Current
     var hourly: [Current]
     var daily: [Daily]
-
+    
     enum CodingKeys: String, CodingKey {
         case lat, lon, timezone
         case timezoneOffset = "timezone_offset"
@@ -56,7 +38,7 @@ struct Current: Codable {
     let windDeg: Int
     let weather: [Weather]
     let pop: Double?
-
+    
     enum CodingKeys: String, CodingKey {
         case dt, sunrise, sunset, temp
         case feelsLike = "feels_like"
@@ -74,7 +56,7 @@ struct Weather: Codable {
     let main: String
     let weatherDescription: String
     let icon: String
-
+    
     enum CodingKeys: String, CodingKey {
         case id, main
         case weatherDescription = "description"
@@ -93,7 +75,7 @@ struct Daily: Codable {
     let clouds: Int
     let pop, uvi: Double?
     let rain: Double?
-
+    
     enum CodingKeys: String, CodingKey {
         case dt, sunrise, sunset, temp
         case feelsLike = "feels_like"

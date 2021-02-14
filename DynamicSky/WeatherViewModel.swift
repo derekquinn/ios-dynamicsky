@@ -2,9 +2,8 @@ import Foundation
 
 public class WeatherViewModel: ObservableObject {
     
-    @Published var cityName: String = ""
-    @Published var temperature: String = ""
-    @Published var weatherDescription: String = ""
+    @Published var currentLocalTemperature: String = ""
+    @Published var daily = [Daily]()
     
     public let weatherService: WeatherService
     
@@ -15,9 +14,8 @@ public class WeatherViewModel: ObservableObject {
     public func refresh(){
         weatherService.loadWeatherData { weather in
             DispatchQueue.main.async {
-                self.cityName = ""
-                self.temperature = "\(weather.current.temp)ºF"
-                self.weatherDescription = ""
+                self.currentLocalTemperature = "\(weather.current.temp)ºF"
+                self.daily = weather.daily
             }
         }
     }
