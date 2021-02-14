@@ -48,5 +48,17 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Using location to retrieve local weather forecast.</string>
+	<key>NSLocation</key>
+	<string></string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>OpenSky</key>
+			<string>http://openweathermap.org</string>
+		</dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>

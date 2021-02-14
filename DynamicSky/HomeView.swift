@@ -9,10 +9,9 @@ struct HomeView: View {
         NavigationView{
             TabView(selection: $selectedIndex) {
                 
-                CurrentLocalWeatherView(viewModel: viewModel)
+                CurrentConditionsView(viewModel: viewModel)
                     .onTapGesture {
                         selectedIndex = 0
-                        
                     }
                     .tabItem{
                         Text("Current")
@@ -20,7 +19,7 @@ struct HomeView: View {
                         
                     }.tag(0)
                 
-                LocalWeatherForecastView()
+                DailyForecastView(viewModel: viewModel)
                     .onTapGesture {
                         selectedIndex = 1
                         
@@ -28,7 +27,6 @@ struct HomeView: View {
                     .tabItem{
                         Text("Forecast")
                         Image(systemName: "calendar")
-                        
                     }.tag(1)
             }
             
@@ -40,11 +38,3 @@ struct HomeView: View {
         }
     }
 }
-
-//}
-////
-////struct WeatherView_Previews: PreviewProvider {
-////    static var previews: some View {
-////        HomeView(viewModel: WeatherViewModel(weatherService: OpenSkyService()))
-////    }
-////}
