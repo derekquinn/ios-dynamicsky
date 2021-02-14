@@ -14,7 +14,7 @@ struct HomeView: View {
                         selectedIndex = 0
                     }
                     .tabItem{
-                        Text("Current")
+                        Text(UIConstantsEN.tabItemCurrent)
                         Image(systemName: "location.north")
                         
                     }.tag(0)
@@ -25,16 +25,17 @@ struct HomeView: View {
                         
                     }
                     .tabItem{
-                        Text("Forecast")
+                        Text(UIConstantsEN.tabItemForecast)
                         Image(systemName: "calendar")
                     }.tag(1)
-            }
-            
-            .navigationBarItems(leading: Button(action: { }, label: {
-                Image(systemName:"person")
-            }))
-            .navigationBarTitle("Username")
-            .navigationBarTitleDisplayMode(.inline)
+            }.colorInvert()
+            // commented navigationBar button triggers fatalError() for testing sad path
+            //            .navigationBarItems(leading: Button(action: { fatalError()}, label: {
+            //                Image(systemName:"exclamationmark.triangle").foregroundColor(.red)
+            //            }))
+            .navigationBarTitle(UIConstantsEN.navBarTitle[selectedIndex])
+            .navigationBarTitleDisplayMode(.large)
+            .colorInvert()
         }
     }
 }

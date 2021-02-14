@@ -7,16 +7,25 @@ struct CurrentConditionsView: View {
     var body: some View {
         VStack {
             
-            Text(viewModel.currentLocalTemperature)
-                .font(.system(size: 70))
-                .bold()
-            
-        }.onAppear(perform: { viewModel.refresh()} )
+            if viewModel.current.temp != 0 {
+                Text(DateHelper.convertEpochToFullDate(epoch: viewModel.current.epochDate))
+                Text("\(Int(viewModel.current.temp))ºF")
+                    .font(.system(size: 70))
+                    .bold()
+                Text("\(UIConstantsEN.currentConditionsFeelsLike)  \(Int(viewModel.current.tempFeelsLike))ºF")
+                    .font(.system(size: 25))
+                    .foregroundColor(.gray)
+            } else {
+                VStack{
+                    LoadingView()
+                }
+            }
+        }.onAppear(perform: { viewModel.refreshWeatherData()} )
     }
 }
 
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentConditionsView(viewModel: WeatherViewModel(weatherService: WeatherService()))
+        CurrentConditionsView(viewModel: WeatherViewModel(weatherService: WeatherFromUserLocationService()))
     }
 }

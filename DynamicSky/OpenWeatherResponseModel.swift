@@ -1,24 +1,14 @@
 import Foundation
 
-struct OpenSkyResponse: Codable {
+struct OpenWeatherResponse: Codable {
     var lat, lon: Double
-    var timezone: String
-    var timezoneOffset: Int
     var current: Current
     var hourly: [Current]
     var daily: [Daily]
     
-    enum CodingKeys: String, CodingKey {
-        case lat, lon, timezone
-        case timezoneOffset = "timezone_offset"
-        case current, hourly, daily
-    }
-    
-    init(response: OpenSkyResponse){
+    init(response: OpenWeatherResponse){
         self.lat = response.lat
         self.lon = response.lon
-        self.timezone = response.timezone
-        self.timezoneOffset = response.timezoneOffset
         self.current = response.current
         self.hourly = response.hourly
         self.daily = response.daily
@@ -27,27 +17,21 @@ struct OpenSkyResponse: Codable {
 }
 
 struct Current: Codable {
-    let dt: Int
-    let sunrise, sunset: Int?
-    let temp, feelsLike: Double
-    let pressure, humidity: Int
-    let dewPoint: Double
-    let uvi: Double?
-    let clouds, visibility: Int
-    let windSpeed: Double
-    let windDeg: Int
+    let epochDate: Int
+    let temp, tempFeelsLike: Double
     let weather: [Weather]
-    let pop: Double?
+    
+    init(){
+        self.epochDate = 0
+        self.tempFeelsLike = 0
+        self.temp = 0
+        self.weather = [Weather]()
+    }
     
     enum CodingKeys: String, CodingKey {
-        case dt, sunrise, sunset, temp
-        case feelsLike = "feels_like"
-        case pressure, humidity
-        case dewPoint = "dew_point"
-        case uvi, clouds, visibility
-        case windSpeed = "wind_speed"
-        case windDeg = "wind_deg"
-        case weather, pop
+        case temp, weather
+        case epochDate = "dt"
+        case tempFeelsLike = "feels_like"
     }
 }
 
@@ -58,9 +42,8 @@ struct Weather: Codable {
     let icon: String
     
     enum CodingKeys: String, CodingKey {
-        case id, main
+        case id, main, icon
         case weatherDescription = "description"
-        case icon
     }
 }
 
@@ -77,13 +60,11 @@ struct Daily: Codable {
     let rain: Double?
     
     enum CodingKeys: String, CodingKey {
-        case dt, sunrise, sunset, temp
+        case dt, sunrise, sunset, temp, pressure, humidity, weather, clouds, pop, uvi, rain
         case feelsLike = "feels_like"
-        case pressure, humidity
         case dewPoint = "dew_point"
         case windSpeed = "wind_speed"
         case windDeg = "wind_deg"
-        case weather, clouds, pop, uvi, rain
     }
 }
 
