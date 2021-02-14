@@ -1,10 +1,12 @@
 import SwiftUI
 
 @main
-struct DynamicSkyApp: App {
+struct CyanSkyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            var weatherService = WeatherService()
+            var viewModel = WeatherViewModel(weatherService: weatherService)
+            HomeView(viewModel: viewModel , selectedIndex: 0)
         }
     }
 }
