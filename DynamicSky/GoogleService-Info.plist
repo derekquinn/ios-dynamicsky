@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>389671275860-5j42k7ggbd96u9el5kovvsf83nhjnsjk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.389671275860-5j42k7ggbd96u9el5kovvsf83nhjnsjk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAsFYBzAjN1Dmawjhvhv1zjoj425bYJU6A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>389671275860</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.derekquinn.DynamicSky</string>
+	<key>PROJECT_ID</key>
+	<string>dynamicsky-ios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dynamicsky-ios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:389671275860:ios:f6db4bda2cf20b7ea7ccc1</string>
+</dict>
+</plist>
