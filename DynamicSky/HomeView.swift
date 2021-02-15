@@ -28,6 +28,16 @@ struct HomeView: View {
                         Text(UIConstantsEN.tabItemForecast)
                         Image(systemName: "calendar")
                     }.tag(1)
+                SearchView(userEnteredZipCode: "")
+                    .onTapGesture {
+                        selectedIndex = 2
+                        
+                    }
+                    .tabItem{
+                        Text(UIConstantsEN.tabItemForecast)
+                        Image(systemName: "magnifyingglass")
+                    }.tag(2)
+                
             }.colorInvert()
             // commented navigationBar button triggers fatalError() for testing sad path
             //            .navigationBarItems(leading: Button(action: { fatalError()}, label: {

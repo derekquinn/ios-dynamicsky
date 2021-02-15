@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct SearchView: View {
+    @State var userEnteredZipCode: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                TextField("Enter a Zip Code", text: $userEnteredZipCode)
+                    .padding()
+                Image(systemName: "magnifyingglass").onTapGesture {
+                    print("ZIP = \(userEnteredZipCode)")
+                }
+            }
+            Spacer()
+        }
+        
+        
+        
     }
 }
 

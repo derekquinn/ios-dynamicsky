@@ -24,6 +24,7 @@
 		C4CC8C9D25D9B66100D9E46D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4CC8C9C25D9B66100D9E46D /* GoogleService-Info.plist */; };
 		C4CC8CA725D9BEBA00D9E46D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CA625D9BEBA00D9E46D /* LoadingView.swift */; };
 		C4CC8CB225DA066E00D9E46D /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CB125DA066E00D9E46D /* UIConstants.swift */; };
+		C4CC8CD925DAF9B000D9E46D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CD825DAF9B000D9E46D /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		C4CC8C9C25D9B66100D9E46D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4CC8CA625D9BEBA00D9E46D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C4CC8CB125DA066E00D9E46D /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		C4CC8CD825DAF9B000D9E46D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				C4CC8C5025D75D8800D9E46D /* CurrentConditionsView.swift */,
 				C4CC8C7425D8D0DE00D9E46D /* DailyForecastView.swift */,
 				C4CC8CA625D9BEBA00D9E46D /* LoadingView.swift */,
+				C4CC8CD825DAF9B000D9E46D /* SearchView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				C4CC8C3125D7518900D9E46D /* WeatherViewModel.swift in Sources */,
 				C4CC8CA725D9BEBA00D9E46D /* LoadingView.swift in Sources */,
 				C4CC8C3D25D7524500D9E46D /* OpenWeatherResponseModel.swift in Sources */,
+				C4CC8CD925DAF9B000D9E46D /* SearchView.swift in Sources */,
 				C4CC8C2025D74EAA00D9E46D /* DynamicSkyApp.swift in Sources */,
 				C4CC8C5125D75D8800D9E46D /* CurrentConditionsView.swift in Sources */,
 				C4CC8C8E25D907CD00D9E46D /* DateHelper.swift in Sources */,
