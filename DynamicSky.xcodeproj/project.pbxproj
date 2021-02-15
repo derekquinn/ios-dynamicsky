@@ -25,6 +25,7 @@
 		C4CC8CA725D9BEBA00D9E46D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CA625D9BEBA00D9E46D /* LoadingView.swift */; };
 		C4CC8CB225DA066E00D9E46D /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CB125DA066E00D9E46D /* UIConstants.swift */; };
 		C4CC8CD925DAF9B000D9E46D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CD825DAF9B000D9E46D /* SearchView.swift */; };
+		C4CC8CDC25DAFE4300D9E46D /* WeatherFromZipSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CDB25DAFE4300D9E46D /* WeatherFromZipSearchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C4CC8CA625D9BEBA00D9E46D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C4CC8CB125DA066E00D9E46D /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		C4CC8CD825DAF9B000D9E46D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C4CC8CDB25DAFE4300D9E46D /* WeatherFromZipSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherFromZipSearchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				C4CC8C7025D8C34500D9E46D /* WeatherFromUserLocationService.swift */,
+				C4CC8CDB25DAFE4300D9E46D /* WeatherFromZipSearchService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				C4CC8C3125D7518900D9E46D /* WeatherViewModel.swift in Sources */,
 				C4CC8CA725D9BEBA00D9E46D /* LoadingView.swift in Sources */,
 				C4CC8C3D25D7524500D9E46D /* OpenWeatherResponseModel.swift in Sources */,
+				C4CC8CDC25DAFE4300D9E46D /* WeatherFromZipSearchService.swift in Sources */,
 				C4CC8CD925DAF9B000D9E46D /* SearchView.swift in Sources */,
 				C4CC8C2025D74EAA00D9E46D /* DynamicSkyApp.swift in Sources */,
 				C4CC8C5125D75D8800D9E46D /* CurrentConditionsView.swift in Sources */,

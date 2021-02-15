@@ -1,14 +1,8 @@
-//
-//  SearchView.swift
-//  DynamicSky
-//
-//  Created by Derek Quinn on 2/15/21.
-//
-
 import SwiftUI
 
 struct SearchView: View {
     @State var userEnteredZipCode: String = ""
+    @ObservedObject var viewModel: WeatherViewModel
     
     var body: some View {
         VStack{
@@ -17,6 +11,7 @@ struct SearchView: View {
                     .padding()
                 Image(systemName: "magnifyingglass").onTapGesture {
                     print("ZIP = \(userEnteredZipCode)")
+                    viewModel.retrieveSearchResults(zipCode: userEnteredZipCode)
                 }
             }
             Spacer()
@@ -27,8 +22,8 @@ struct SearchView: View {
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-    }
-}
+//struct SearchView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchView()
+//    }
+//}

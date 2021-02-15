@@ -28,7 +28,7 @@ struct HomeView: View {
                         Text(UIConstantsEN.tabItemForecast)
                         Image(systemName: "calendar")
                     }.tag(1)
-                SearchView(userEnteredZipCode: "")
+                SearchView(userEnteredZipCode: "", viewModel: viewModel)
                     .onTapGesture {
                         selectedIndex = 2
                         
