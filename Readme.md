@@ -1,10 +1,11 @@
-# DynamicSky iOS Application 0.0.2 (SwiftUI)
+# DynamicSky iOS Application 0.0.3 (SwiftUI)
 _DynamicSky is a simple and fast weather application for iOS versions 13 and above._
 
 ## Features 
 - Current weather view with local temperature and feels like temperature. 
 - Five day forecast with dynamic icons and houlry temperature per day
 - Automatic user location retrieval (with user permission)
+- Search by Zip Code for current weather conditions including temperature and feels like temperature.
 
 ## Dependencies 
 - Firebase Crashlytics *v7.6.0* [(documentation)](https://firebase.google.com/docs/crashlytics) & [(repository)](https://github.com/firebase/firebase-ios-sdk/blob/master/SwiftPackageManager.md)
