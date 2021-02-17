@@ -13,8 +13,8 @@ struct DailyForecastView: View {
                     HStack{
                         Text("\(DateHelper.convertEpochToDay(epoch: viewModel.daily[index].dt))")
                             .padding(.leading)
-                            .padding(.trailing,20)
-                            .font(.system(size: 20))
+                            .padding(.trailing,12)
+                            .font(.caption)
                         Spacer()
                         VStack{
                             Text(UIConstantsEN.dailyForecastTimes[0]).font(.footnote).padding(.bottom,2)
