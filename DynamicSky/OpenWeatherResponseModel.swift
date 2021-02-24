@@ -76,3 +76,33 @@ struct Temp: Codable {
     let day, min, max, night: Double
     let eve, morn: Double
 }
+
+struct OpenWeatherSearchResponse: Codable {
+    let name: String
+    let searchResults: SearchResults
+    
+    init(){
+        self.searchResults = SearchResults()
+        self.name = ""
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case searchResults = "main"
+    }
+}
+
+struct SearchResults: Codable {
+    let temp: Double
+    let feelsLike: Double
+    
+    init(){
+        self.temp = 0.0
+        self.feelsLike = 0.0
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case temp
+        case feelsLike = "feels_like"
+    }
+}

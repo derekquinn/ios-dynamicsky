@@ -4,6 +4,7 @@ public class WeatherViewModel: ObservableObject {
     
     @Published var current = Current()
     @Published var daily = [Daily]()
+    @Published var openWeatherSearchResponse = OpenWeatherSearchResponse()
     
     public let weatherService: WeatherFromUserLocationService
     
@@ -11,7 +12,7 @@ public class WeatherViewModel: ObservableObject {
         self.weatherService = weatherService
     }
     
-    public func refreshWeatherData(){
+    public func refreshWeatherDataFromCurrentLocation(){
         weatherService.retrieveUserLocation { weather in
             DispatchQueue.main.async {
                 self.current = weather.current
@@ -19,4 +20,14 @@ public class WeatherViewModel: ObservableObject {
             }
         }
     }
+    
+    public func retrieveSearchResults(zipCode: String){
+        DispatchQueue.main.async{
+            WeatherFromZipSearchService.retrieveSearchResultsFromUserEnteredZip(zipCode: zipCode) { results in
+                self.openWeatherSearchResponse = results
+            }
+        }
+    }
 }
+
+

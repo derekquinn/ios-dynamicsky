@@ -20,7 +20,7 @@ struct CurrentConditionsView: View {
                     LoadingView()
                 }
             }
-        }.onAppear(perform: { viewModel.refreshWeatherData()} )
+        }.onAppear(perform: { viewModel.refreshWeatherDataFromCurrentLocation()} )
     }
 }
 
