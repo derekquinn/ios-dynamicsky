@@ -137,8 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				C4CC8C6A25D8B6F000D9E46D /* OpenWeatherConstants.swift */,
-				C4CC8C9325D9B38C00D9E46D /* Secrets.swift */,
 				C4CC8CB125DA066E00D9E46D /* UIConstants.swift */,
+				C4CC8C9325D9B38C00D9E46D /* Secrets.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";

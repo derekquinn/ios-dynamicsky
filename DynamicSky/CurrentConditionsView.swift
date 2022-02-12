@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct CurrentConditionsView: View {
+
     @ObservedObject var viewModel = CurrentConditionsViewModel()
 
     var body: some View {
         VStack {
-            if let currentWeather = viewModel.current {
+            if !viewModel.current.weather.isEmpty,
+               let currentWeather = viewModel.current {
                 Text(DateHelper.convertEpochToFullDate(epoch: currentWeather.epochDate))
                 Text("\(Int(currentWeather.temp))ºF")
                     .font(.system(size: 70))
@@ -18,4 +20,5 @@ struct CurrentConditionsView: View {
             }
         }
     }
+
 }

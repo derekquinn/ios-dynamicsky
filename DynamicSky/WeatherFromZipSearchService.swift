@@ -2,27 +2,28 @@ import Foundation
 import Firebase
 
 class WeatherFromZipSearchService {
-    
+
     static func retrieveSearchResultsFromUserEnteredZip(zipCode: String, completion: @escaping (OpenWeatherSearchResponse) -> (Void) ){
         guard let urlString = "https://api.openweathermap.org/data/2.5/weather?zip=\(zipCode)&&units=imperial&appid=\(Secrets.openWeatherAppId)&countrycode=US".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         else {
             Crashlytics.crashlytics().log("[OPEN WEATHER REQUEST ERROR] urlString exception")
             return
         }
-        
+
         guard let url = URL(string: urlString) else{
             Crashlytics.crashlytics().log("[ERROR OPEN WEATHER REQUEST] URL =\(urlString)")
             return
         }
-        
+
         URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
             
             guard error == nil, let data = data else {
                 Crashlytics.crashlytics().log("[ERROR OPEN WEATHER REQUEST] URLSession Error =\(error.debugDescription)")
                 return
             }
+
             DispatchQueue.main.async{
-                
+
                 do {
                     let response = try JSONDecoder().decode(OpenWeatherSearchResponse.self, from: data)
                     Crashlytics.crashlytics().log("[OPEN WEATHER REQUEST SUCCESS] RESPONSE RECEIVED \(response.name)")
@@ -42,7 +43,5 @@ class WeatherFromZipSearchService {
             }
         }).resume()
     }
-    
-    
 }
 

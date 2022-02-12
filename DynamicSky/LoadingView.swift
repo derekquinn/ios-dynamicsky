@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct LoadingView: View {
+
     var body: some View {
         VStack{
             Text(UIConstantsEN.loadingView)
@@ -10,4 +11,5 @@ struct LoadingView: View {
                 .font(.title)
         }
     }
+
 }

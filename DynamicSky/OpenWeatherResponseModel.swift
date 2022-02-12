@@ -47,7 +47,8 @@ struct Weather: Codable {
     }
 }
 
-struct Daily: Codable {
+struct Daily: Codable, Identifiable {
+    let id = UUID()
     let dt, sunrise, sunset: Int
     let temp: Temp
     let feelsLike: FeelsLike

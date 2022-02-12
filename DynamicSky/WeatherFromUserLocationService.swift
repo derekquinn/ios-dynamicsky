@@ -3,22 +3,22 @@ import CoreLocation
 import FirebaseCrashlytics
 
 public final class WeatherFromUserLocationService: NSObject {
-    
+
     private let locationManager = CLLocationManager()
     private var completionHandler: ((OpenWeatherResponse)-> Void)?
-    
-    public override init(){
+
+    override init(){
         super.init()
         locationManager.delegate = self
     }
-    
-    func retrieveUserLocation(_ completionHandler: @escaping ((OpenWeatherResponse)-> Void)){
+
+    func retrieveUserLocation(_ completionHandler: @escaping ((OpenWeatherResponse)-> Void)) {
         self.completionHandler = completionHandler
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
-    
-    private func requestWeatherWithUserCoordinates(forCoordinates coordinates: CLLocationCoordinate2D){
+
+    private func requestWeatherWithUserCoordinates(forCoordinates coordinates: CLLocationCoordinate2D) {
         guard let urlString = "https://api.openweathermap.org/data/2.5/onecall?lat=\(coordinates.latitude)&lon=\(coordinates.longitude)&units=imperial&appid=\(Secrets.openWeatherAppId)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         else {
             Crashlytics.crashlytics().log("[OPEN WEATHER REQUEST ERROR] urlString exception")
@@ -56,12 +56,12 @@ public final class WeatherFromUserLocationService: NSObject {
 }
 
 extension WeatherFromUserLocationService: CLLocationManagerDelegate {
-    
+
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         requestWeatherWithUserCoordinates(forCoordinates: location.coordinate)
     }
-    
+
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
         let err = CLError.Code(rawValue: (error as NSError).code)!

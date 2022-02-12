@@ -8,7 +8,7 @@ class DateHelper {
         let dayOfWeek = dateFormatter.string(from: date)
         return dayOfWeek
     }
-    
+
     static func convertEpochToFullDate(epoch: Int) -> String {
         let date: Date = NSDate(timeIntervalSince1970: TimeInterval(epoch)) as Date
         let dateFormatter = DateFormatter()
