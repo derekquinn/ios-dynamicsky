@@ -37,5 +37,5 @@ struct HomeView: View {
             .colorInvert()
         }
     }
-
 }
+
