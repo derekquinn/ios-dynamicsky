@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct HomeView: View {
-
     @ObservedObject var viewModel: CurrentConditionsViewModel
     @State var selectedIndex: Int
 
