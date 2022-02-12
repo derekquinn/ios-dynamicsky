@@ -1,50 +1,41 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @ObservedObject var viewModel: WeatherViewModel
+    @ObservedObject var viewModel: CurrentConditionsViewModel
     @State var selectedIndex: Int
-    
+
     var body: some View {
         NavigationView{
             TabView(selection: $selectedIndex) {
-                
-                CurrentLocalWeatherView(viewModel: viewModel)
+                CurrentConditionsView(viewModel: viewModel)
                     .onTapGesture {
                         selectedIndex = 0
-                        
                     }
                     .tabItem{
-                        Text("Current")
+                        Text(UIConstantsEN.tabItemCurrent)
                         Image(systemName: "location.north")
-                        
                     }.tag(0)
-                
-                LocalWeatherForecastView()
+                DailyForecastView()
                     .onTapGesture {
                         selectedIndex = 1
-                        
                     }
                     .tabItem{
-                        Text("Forecast")
+                        Text(UIConstantsEN.tabItemForecast)
                         Image(systemName: "calendar")
-                        
                     }.tag(1)
-            }
-            
-            .navigationBarItems(leading: Button(action: { }, label: {
-                Image(systemName:"person")
-            }))
-            .navigationBarTitle("Username")
-            .navigationBarTitleDisplayMode(.inline)
+                SearchView(userEnteredZipCode: "")
+                    .onTapGesture {
+                        selectedIndex = 2
+
+                    }
+                    .tabItem{
+                        Text(UIConstantsEN.tabItemForecast)
+                        Image(systemName: "magnifyingglass")
+                    }.tag(2)
+            }.colorInvert()
+            .navigationBarTitle(UIConstantsEN.navBarTitle[selectedIndex])
+            .navigationBarTitleDisplayMode(.large)
+            .colorInvert()
         }
     }
 }
-
-//}
-////
-////struct WeatherView_Previews: PreviewProvider {
-////    static var previews: some View {
-////        HomeView(viewModel: WeatherViewModel(weatherService: OpenSkyService()))
-////    }
-////}

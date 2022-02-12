@@ -1,11 +1,14 @@
 import SwiftUI
+import Firebase
 
 @main
 struct CyanSkyApp: App {
+    init(){
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
-            var weatherService = WeatherService()
-            var viewModel = WeatherViewModel(weatherService: weatherService)
+            let viewModel = CurrentConditionsViewModel()
             HomeView(viewModel: viewModel , selectedIndex: 0)
         }
     }
