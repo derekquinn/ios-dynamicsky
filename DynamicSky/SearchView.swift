@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State var userEnteredZipCode: String = ""
-    @ObservedObject var viewModel: WeatherViewModel
+    @ObservedObject var viewModel = SearchViewModel()
     @State var isZipCodeValid: Bool = true
     @State var isMessageNeeded: Bool = true
     
@@ -58,9 +58,3 @@ struct SearchView: View {
         }
     }
 }
-
-//struct SearchView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SearchView()
-//    }
-//}
