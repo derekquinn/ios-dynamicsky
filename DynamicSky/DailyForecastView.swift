@@ -8,8 +8,7 @@ struct DailyForecastView: View {
     var body: some View {
 
         List {
-            if !viewModel.daily.isEmpty,
-               let dailyForecast = viewModel.daily {
+            if let dailyForecast = viewModel.daily {
                 ForEach(dailyForecast) { forecast in
                     HStack(alignment: .center) {
                         Text("\(Int(forecast.temp.morn))")

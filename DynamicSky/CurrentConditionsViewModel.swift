@@ -2,7 +2,7 @@ import Foundation
 
 public class CurrentConditionsViewModel: ObservableObject {
 
-    @Published var current = Current()
+    @Published var current: Current?
     private let weatherService =  WeatherFromUserLocationService()
 
     init(){

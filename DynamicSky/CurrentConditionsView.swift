@@ -6,13 +6,15 @@ struct CurrentConditionsView: View {
 
     var body: some View {
         VStack {
-            if !viewModel.current.weather.isEmpty,
-               let currentWeather = viewModel.current {
-                Text(DateHelper.convertEpochToFullDate(epoch: currentWeather.epochDate))
-                Text("\(Int(currentWeather.temp))ºF")
+            if let currentWeather = viewModel.current,
+               let date = viewModel.current?.epochDate,
+               let temp = currentWeather.temp,
+               let feelsLike = currentWeather.tempFeelsLike {
+                Text(DateHelper.convertEpochToFullDate(epoch: date))
+                Text("\(Int(temp))ºF")
                     .font(.system(size: 70))
                     .bold()
-                Text("\(UIConstantsEN.currentConditionsFeelsLike)  \(Int(currentWeather.tempFeelsLike))ºF")
+                Text("\(UIConstantsEN.currentConditionsFeelsLike) \(Int(feelsLike))ºF")
                     .font(.system(size: 25))
                     .foregroundColor(.gray)
             } else {

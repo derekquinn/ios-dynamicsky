@@ -38,8 +38,7 @@ public final class WeatherFromUserLocationService: NSObject {
             }
             do {
                 let response = try JSONDecoder().decode(OpenWeatherResponse.self, from: data)
-                Crashlytics.crashlytics().log("[OPEN WEATHER REQUEST SUCCESS] RESPONSE RECEIVED \(response.daily.count)")
-                self.completionHandler?(OpenWeatherResponse(response: response))
+                self.completionHandler?(response)
             } catch let DecodingError.dataCorrupted(context) {
                 Crashlytics.crashlytics().log("[ERROR JSONDecoder()] .dataCorrupted context = \(context)")
             } catch let DecodingError.keyNotFound(key, context) {

@@ -1,7 +1,7 @@
 import Foundation
 
 final class SearchViewModel: ObservableObject {
-    @Published var openWeatherSearchResponse = OpenWeatherSearchResponse()
+    @Published var openWeatherSearchResponse: OpenWeatherSearchResponse?
 
     init() {}
 

@@ -2,17 +2,16 @@ import SwiftUI
 
 struct HomeView: View {
 
-    @ObservedObject var viewModel: CurrentConditionsViewModel
-    @State var selectedIndex: Int
+    @State var selectedIndex: Int = 0
 
     var body: some View {
-        NavigationView{
+        NavigationView {
             TabView(selection: $selectedIndex) {
-                CurrentConditionsView(viewModel: viewModel)
+                CurrentConditionsView()
                     .onTapGesture {
                         selectedIndex = 0
                     }
-                    .tabItem{
+                    .tabItem {
                         Text(UIConstantsEN.tabItemCurrent)
                         Image(systemName: "location.north")
                     }.tag(0)
@@ -20,16 +19,15 @@ struct HomeView: View {
                     .onTapGesture {
                         selectedIndex = 1
                     }
-                    .tabItem{
+                    .tabItem {
                         Text(UIConstantsEN.tabItemForecast)
                         Image(systemName: "calendar")
                     }.tag(1)
-                SearchView(userEnteredZipCode: "")
+                SearchView()
                     .onTapGesture {
                         selectedIndex = 2
-
                     }
-                    .tabItem{
+                    .tabItem {
                         Text(UIConstantsEN.tabItemForecast)
                         Image(systemName: "magnifyingglass")
                     }.tag(2)
@@ -39,4 +37,5 @@ struct HomeView: View {
             .colorInvert()
         }
     }
+
 }

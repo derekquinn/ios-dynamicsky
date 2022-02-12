@@ -27,13 +27,14 @@ struct SearchView: View {
 
             Spacer()
 
-            if !viewModel.openWeatherSearchResponse.name.isEmpty,
-               let currentWeather = viewModel.openWeatherSearchResponse {
-                Text(currentWeather.name)
-                Text("\(Int(currentWeather.searchResults.temp))ºF")
+            if let name = viewModel.openWeatherSearchResponse?.name,
+               let temp = viewModel.openWeatherSearchResponse?.searchResults?.temp,
+               let feelsLike = viewModel.openWeatherSearchResponse?.searchResults?.feelsLike {
+                Text(name)
+                Text("\(Int(temp))ºF")
                     .font(.system(size: 70))
                     .bold()
-                Text("\(UIConstantsEN.currentConditionsFeelsLike) \(Int(currentWeather.searchResults.feelsLike))ºF")
+                Text("\(UIConstantsEN.currentConditionsFeelsLike) \(Int(feelsLike))ºF")
                     .font(.system(size: 25))
                     .foregroundColor(.gray)
             }

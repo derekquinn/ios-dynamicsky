@@ -1,7 +1,7 @@
 import Foundation
 
 class DailyForecastViewModel: ObservableObject {
-    @Published var daily = [Daily]()
+    @Published var daily: [Daily]?
     private let weatherService =  WeatherFromUserLocationService()
 
     init() {

@@ -1,33 +1,25 @@
 import Foundation
 
 struct OpenWeatherResponse: Codable {
-    var lat, lon: Double
-    var current: Current
-    var hourly: [Current]
-    var daily: [Daily]
-    
-    init(response: OpenWeatherResponse){
-        self.lat = response.lat
-        self.lon = response.lon
-        self.current = response.current
-        self.hourly = response.hourly
-        self.daily = response.daily
-        
-    }
+    var lat, lon: Double?
+    var current: Current?
+    var hourly: [Current]?
+    var daily: [Daily]?
+
+//    init(response: OpenWeatherResponse) {
+//        self.lat = response.lat
+//        self.lon = response.lon
+//        self.current = response.current
+//        self.hourly = response.hourly
+//        self.daily = response.daily
+//    }
 }
 
 struct Current: Codable {
-    let epochDate: Int
-    let temp, tempFeelsLike: Double
-    let weather: [Weather]
-    
-    init(){
-        self.epochDate = 0
-        self.tempFeelsLike = 0
-        self.temp = 0
-        self.weather = [Weather]()
-    }
-    
+    let epochDate: Int?
+    let temp, tempFeelsLike: Double?
+    let weather: [Weather]?
+
     enum CodingKeys: String, CodingKey {
         case temp, weather
         case epochDate = "dt"
@@ -40,7 +32,7 @@ struct Weather: Codable {
     let main: String
     let weatherDescription: String
     let icon: String
-    
+
     enum CodingKeys: String, CodingKey {
         case id, main, icon
         case weatherDescription = "description"
@@ -79,14 +71,9 @@ struct Temp: Codable {
 }
 
 struct OpenWeatherSearchResponse: Codable {
-    let name: String
-    let searchResults: SearchResults
-    
-    init(){
-        self.searchResults = SearchResults()
-        self.name = ""
-    }
-    
+    let name: String?
+    let searchResults: SearchResults?
+
     enum CodingKeys: String, CodingKey {
         case name
         case searchResults = "main"
@@ -94,14 +81,9 @@ struct OpenWeatherSearchResponse: Codable {
 }
 
 struct SearchResults: Codable {
-    let temp: Double
-    let feelsLike: Double
-    
-    init(){
-        self.temp = 0.0
-        self.feelsLike = 0.0
-    }
-    
+    let temp: Double?
+    let feelsLike: Double?
+
     enum CodingKeys: String, CodingKey {
         case temp
         case feelsLike = "feels_like"
