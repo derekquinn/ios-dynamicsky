@@ -3,12 +3,12 @@ import Kingfisher
 
 struct DailyForecastView: View {
 
-    @ObservedObject var viewModel = DailyForecastViewModel()
+    @ObservedObject private var viewModel = DailyForecastViewModel()
 
     var body: some View {
 
         List {
-            if let dailyForecast = viewModel.daily {
+            if let dailyForecast = viewModel.weather?.daily {
                 ForEach(dailyForecast) { forecast in
                     HStack(alignment: .center) {
                         Text("\(Int(forecast.temp.morn))")

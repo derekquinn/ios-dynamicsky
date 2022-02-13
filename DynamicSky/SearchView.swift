@@ -34,7 +34,7 @@ struct SearchView: View {
                 Text("\(Int(temp))ºF")
                     .font(.system(size: 70))
                     .bold()
-                Text("\(UIConstantsEN.currentConditionsFeelsLike) \(Int(feelsLike))ºF")
+                Text("Feels Like \(Int(feelsLike))ºF")
                     .font(.system(size: 25))
                     .foregroundColor(.gray)
             }

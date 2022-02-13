@@ -5,14 +5,6 @@ struct OpenWeatherResponse: Codable {
     var current: Current?
     var hourly: [Current]?
     var daily: [Daily]?
-
-//    init(response: OpenWeatherResponse) {
-//        self.lat = response.lat
-//        self.lon = response.lon
-//        self.current = response.current
-//        self.hourly = response.hourly
-//        self.daily = response.daily
-//    }
 }
 
 struct Current: Codable {

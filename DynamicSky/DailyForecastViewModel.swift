@@ -1,17 +1,18 @@
 import Foundation
 
 class DailyForecastViewModel: ObservableObject {
-    @Published var daily: [Daily]?
-    private let weatherService =  WeatherFromUserLocationService()
+
+    @Published var weather: OpenWeatherResponse?
 
     init() {
         self.refreshDailyForecast()
     }
 
-    private func refreshDailyForecast(){
-        weatherService.retrieveUserLocation { weather in
-            DispatchQueue.main.async {
-                self.daily = weather.daily
+    private func refreshDailyForecast() {
+        if let coordinates = UserLocationService.coordinates {
+
+            OpenWeatherService.request(.forecastWithCoordinates(coordinates: coordinates)) { response in
+                self.weather = response
             }
         }
     }

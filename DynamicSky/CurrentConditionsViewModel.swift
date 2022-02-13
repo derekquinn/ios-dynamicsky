@@ -2,17 +2,18 @@ import Foundation
 
 public class CurrentConditionsViewModel: ObservableObject {
 
-    @Published var current: Current?
-    private let weatherService =  WeatherFromUserLocationService()
+    @Published var currentConditions: OpenWeatherSearchResponse?
 
     init(){
         self.refreshCurrentConditions()
     }
 
-    private func refreshCurrentConditions(){
-        weatherService.retrieveUserLocation { weather in
-            DispatchQueue.main.async {
-                self.current = weather.current
+    private func refreshCurrentConditions() {
+        if let coordinates = UserLocationService.coordinates {
+            OpenWeatherService.request(.currentWeatherWithCoordinates(coordinates: coordinates)) { response in
+                DispatchQueue.main.async {
+                    self.currentConditions = response
+                }
             }
         }
     }
