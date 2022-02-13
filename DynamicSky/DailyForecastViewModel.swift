@@ -10,8 +10,8 @@ class DailyForecastViewModel: ObservableObject {
 
     private func refreshDailyForecast() {
         if let coordinates = UserLocationService.coordinates {
-            DispatchQueue.main.async {
-                OpenWeatherService.request(.forecastWithCoordinates(coordinates: coordinates)) { response in
+            OpenWeatherService.request(.forecastWithCoordinates(coordinates: coordinates)) { response in
+                DispatchQueue.main.async {
                     self.weather = response
                 }
             }

@@ -11,6 +11,7 @@
 		C4A6DBF027B779A100404237 /* DailyForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */; };
 		C4A6DBF227B87FB600404237 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */; };
 		C4A6DBF527B899A400404237 /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBF427B899A400404237 /* UserLocationService.swift */; };
+		C4A6DBF727B8C13800404237 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBF627B8C13800404237 /* HomeViewModel.swift */; };
 		C4CC8C2025D74EAA00D9E46D /* DynamicSkyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8C1F25D74EAA00D9E46D /* DynamicSkyApp.swift */; };
 		C4CC8C2425D74EAB00D9E46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CC8C2325D74EAB00D9E46D /* Assets.xcassets */; };
 		C4CC8C2725D74EAB00D9E46D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CC8C2625D74EAB00D9E46D /* Preview Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModel.swift; sourceTree = "<group>"; };
 		C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
 		C4A6DBF427B899A400404237 /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
+		C4A6DBF627B8C13800404237 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C4CC8C1C25D74EAA00D9E46D /* DynamicSky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicSky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CC8C1F25D74EAA00D9E46D /* DynamicSkyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSkyApp.swift; sourceTree = "<group>"; };
 		C4CC8C2325D74EAB00D9E46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				C4CC8C3025D7518900D9E46D /* CurrentConditionsViewModel.swift */,
 				C4A6DBEB27B7734200404237 /* SearchViewModel.swift */,
 				C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */,
+				C4A6DBF627B8C13800404237 /* HomeViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				C4CC8CE525DB67DE00D9E46D /* ValidationHelper.swift in Sources */,
 				C4CC8C2025D74EAA00D9E46D /* DynamicSkyApp.swift in Sources */,
 				C4CC8C5125D75D8800D9E46D /* CurrentConditionsView.swift in Sources */,
+				C4A6DBF727B8C13800404237 /* HomeViewModel.swift in Sources */,
 				C4CC8C9425D9B38C00D9E46D /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

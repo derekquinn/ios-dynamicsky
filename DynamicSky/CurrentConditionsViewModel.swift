@@ -4,7 +4,7 @@ public class CurrentConditionsViewModel: ObservableObject {
 
     @Published var currentConditions: OpenWeatherSearchResponse?
 
-    init(){
+    init() {
         self.refreshCurrentConditions()
     }
 
