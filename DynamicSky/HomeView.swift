@@ -1,41 +1,28 @@
 import SwiftUI
-
 struct HomeView: View {
-    @ObservedObject var viewModel: CurrentConditionsViewModel
-    @State var selectedIndex: Int
+    @ObservedObject var viewModel = HomeViewModel()
+    var userLocationService = UserLocationService()
 
     var body: some View {
-        NavigationView{
-            TabView(selection: $selectedIndex) {
-                CurrentConditionsView(viewModel: viewModel)
-                    .onTapGesture {
-                        selectedIndex = 0
-                    }
-                    .tabItem{
-                        Text(UIConstantsEN.tabItemCurrent)
+        NavigationView {
+            TabView(selection: $viewModel.selectedTabIndex) {
+                CurrentConditionsView()
+                    .tabItem {
+                        Text("Current")
                         Image(systemName: "location.north")
                     }.tag(0)
                 DailyForecastView()
-                    .onTapGesture {
-                        selectedIndex = 1
-                    }
-                    .tabItem{
-                        Text(UIConstantsEN.tabItemForecast)
+                    .tabItem {
+                        Text("Forecast")
                         Image(systemName: "calendar")
                     }.tag(1)
-                SearchView(userEnteredZipCode: "")
-                    .onTapGesture {
-                        selectedIndex = 2
-
-                    }
-                    .tabItem{
-                        Text(UIConstantsEN.tabItemForecast)
+                SearchView()
+                    .tabItem {
+                        Text("Search")
                         Image(systemName: "magnifyingglass")
                     }.tag(2)
-            }.colorInvert()
-            .navigationBarTitle(UIConstantsEN.navBarTitle[selectedIndex])
+            }.navigationBarTitle("Dynamic Sky")
             .navigationBarTitleDisplayMode(.large)
-            .colorInvert()
         }
     }
 }

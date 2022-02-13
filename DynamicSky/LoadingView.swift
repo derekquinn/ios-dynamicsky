@@ -4,7 +4,7 @@ struct LoadingView: View {
 
     var body: some View {
         VStack{
-            Text(UIConstantsEN.loadingView)
+            Text("Loading")
                 .font(.caption)
                 .italic()
             Text("📡")
