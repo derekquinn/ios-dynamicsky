@@ -3,19 +3,19 @@ _DynamicSky is a simple and fast weather application for iOS versions 13 and abo
 
 ## Features 
 - Current weather view with local temperature and feels like temperature. 
-- Five day forecast with dynamic icons and houlry temperature per day
+- Five day forecast with dynamic icons and hourly temperature per day
 - Automatic user location retrieval (with user permission)
 - Search by Zip Code for current weather conditions including temperature and feels like temperature.
 
 ## Dependencies 
 - Firebase Crashlytics *v7.6.0* [(documentation)](https://firebase.google.com/docs/crashlytics) & [(repository)](https://github.com/firebase/firebase-ios-sdk/blob/master/SwiftPackageManager.md)
 - Kingfisher *v6.1.0* [(repository)](https://github.com/onevcat/Kingfisher)
-- *Dependenceies are being managed using [Swift Package Manager](https://swift.org/package-manager/)*
+- *Dependencies are being managed using [Swift Package Manager](https://swift.org/package-manager/)*
 
 ## Open Weather Map API
 - The /onecall endpoint from Open Weather Map API is used to fetch data for temperatures, dates and icons displayed in the UI. 
 - [Documentation for /onecall endpoint](https://openweathermap.org/api/one-call-api)
-- Codable protocol is utilzied to parse & decode the API response in `OpenWeatherResponseModel.swift` & `WeatherService.swift`. 
+- Codable protocol is utilized to parse & decode the API response in `OpenWeatherResponseModel.swift` & `WeatherService.swift`. 
 - More on the Codable protocol from [Apple Documentation](https://developer.apple.com/documentation/swift/codable) 
 
 ## API Security
@@ -29,8 +29,8 @@ struct Secrets {
 }
 ```
 
-## Arcitecture
-- Model View ViewModel pattern is implemented in the codebase, becuse it allows us to easily update dynamic values such as weather icons & temperature values. An excepllent write up on best practices with MVVM in SwiftUI can be found on [Nalexn's GitHub Page](https://nalexn.github.io/clean-architecture-swiftui/). However, the limitations of SwiftUI are probably more important to review, see more from Alina Zaitseva at [SteelKiwi.com](https://steelkiwi.com/blog/swiftui-vs-uikit/). 
+## Architecture
+- Model View ViewModel pattern is implemented in the codebase, because it allows us to easily update dynamic values such as weather icons & temperature values. An excellent write up on best practices with MVVM in SwiftUI can be found on [Nalexn's GitHub Page](https://nalexn.github.io/clean-architecture-swiftui/). However, the limitations of SwiftUI are probably more important to review, see more from Alina Zaitseva at [SteelKiwi.com](https://steelkiwi.com/blog/swiftui-vs-uikit/). 
 
 > - It supports only iOS 13+ and Xcode 11+. By switching to them, you abandon users of older versions of iOS, which is a radical move devoid of concern for the user. But since Apple annually updates its list of supported iOS versions, I think SwiftUI will be used more over the next two years as users install the latest iOS version.
 > - It’s still very young, so there isn’t much data on Stack Overflow. This means that you can’t get much help resolving complicated issues.
