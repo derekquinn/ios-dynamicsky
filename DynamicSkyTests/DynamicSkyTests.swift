@@ -20,8 +20,10 @@ class DynamicSkyTests: XCTestCase {
         }
     }
 
-    func testZipCodeSearch() {
-        stub(condition: isHost("api.openweathermap.org")) { _ in
+    func testZipCodeSearchMakesRequestWithZipCodeAndDecodesSuccessfulResponse() {
+        let expectedURL = "https://api.openweathermap.org/data/2.5/weather?zip=44720&units=imperial&appid=2110c5dbe3f236eaab3ae14a09f1eeee&countrycode=US"
+        stub(condition: isHost("api.openweathermap.org")) { request in
+          XCTAssertEqual(expectedURL, request.url!.absoluteString)
           let stubPath = OHPathForFile("zipresponse.json", type(of: self))
           return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
         }
@@ -29,6 +31,7 @@ class DynamicSkyTests: XCTestCase {
         let expectation = self.expectation(description: "Callback completed successfully")
 
         OpenWeatherService.request(.currentWeatherWithZip(zipCode: "44720"), completion: { (result: OpenWeatherSearchResponse) in
+            
             XCTAssertEqual(result.name, "North Canton")
             XCTAssertEqual(result.searchResults?.temp, 49.3)
             expectation.fulfill()
@@ -40,7 +43,7 @@ class DynamicSkyTests: XCTestCase {
     func testUserLocationSearch() {
         stub(condition: isHost("api.openweathermap.org")) { _ in
           let stubPath = OHPathForFile("coordinateresponse.json", type(of: self))
-          return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
+          return fixture(filePath: stubPath!, headers: ["Content-Type":"applicatn"])
         }
 
         let expectation = self.expectation(description: "Callback completed successfully")
