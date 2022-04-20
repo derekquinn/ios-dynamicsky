@@ -12,6 +12,8 @@
 		C47150C52810734B00F91563 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C47150C42810734B00F91563 /* OHHTTPStubsSwift */; };
 		C47150C7281073E200F91563 /* zipresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C47150C6281073E200F91563 /* zipresponse.json */; };
 		C47150C928107D0D00F91563 /* coordinateresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C47150C828107A6C00F91563 /* coordinateresponse.json */; };
+		C47150D128107EBE00F91563 /* DynamicSkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47150D028107EBE00F91563 /* DynamicSkyUITests.swift */; };
+		C47150D328107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47150D228107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift */; };
 		C4A6DBEC27B7734200404237 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBEB27B7734200404237 /* SearchViewModel.swift */; };
 		C4A6DBF027B779A100404237 /* DailyForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */; };
 		C4A6DBF227B87FB600404237 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */; };
@@ -41,6 +43,13 @@
 			remoteGlobalIDString = C4CC8C1B25D74EAA00D9E46D;
 			remoteInfo = DynamicSky;
 		};
+		C47150D428107EBE00F91563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4CC8C1425D74EAA00D9E46D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4CC8C1B25D74EAA00D9E46D;
+			remoteInfo = DynamicSky;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +57,9 @@
 		C47150BA28106C2A00F91563 /* DynamicSkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSkyTests.swift; sourceTree = "<group>"; };
 		C47150C6281073E200F91563 /* zipresponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zipresponse.json; sourceTree = "<group>"; };
 		C47150C828107A6C00F91563 /* coordinateresponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coordinateresponse.json; sourceTree = "<group>"; };
+		C47150CE28107EBE00F91563 /* DynamicSkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicSkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47150D028107EBE00F91563 /* DynamicSkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSkyUITests.swift; sourceTree = "<group>"; };
+		C47150D228107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSkyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4A6DBEB27B7734200404237 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModel.swift; sourceTree = "<group>"; };
 		C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
@@ -78,6 +90,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C47150CB28107EBE00F91563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CC8C1925D74EAA00D9E46D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,11 +120,21 @@
 			path = DynamicSkyTests;
 			sourceTree = "<group>";
 		};
+		C47150CF28107EBE00F91563 /* DynamicSkyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C47150D028107EBE00F91563 /* DynamicSkyUITests.swift */,
+				C47150D228107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift */,
+			);
+			path = DynamicSkyUITests;
+			sourceTree = "<group>";
+		};
 		C4CC8C1325D74EAA00D9E46D = {
 			isa = PBXGroup;
 			children = (
 				C4CC8C1E25D74EAA00D9E46D /* DynamicSky */,
 				C47150B928106C2A00F91563 /* DynamicSkyTests */,
+				C47150CF28107EBE00F91563 /* DynamicSkyUITests */,
 				C4CC8C1D25D74EAA00D9E46D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +144,7 @@
 			children = (
 				C4CC8C1C25D74EAA00D9E46D /* DynamicSky.app */,
 				C47150B828106C2A00F91563 /* DynamicSkyTests.xctest */,
+				C47150CE28107EBE00F91563 /* DynamicSkyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +252,24 @@
 			productReference = C47150B828106C2A00F91563 /* DynamicSkyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C47150CD28107EBE00F91563 /* DynamicSkyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47150D628107EBE00F91563 /* Build configuration list for PBXNativeTarget "DynamicSkyUITests" */;
+			buildPhases = (
+				C47150CA28107EBE00F91563 /* Sources */,
+				C47150CB28107EBE00F91563 /* Frameworks */,
+				C47150CC28107EBE00F91563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C47150D528107EBE00F91563 /* PBXTargetDependency */,
+			);
+			name = DynamicSkyUITests;
+			productName = DynamicSkyUITests;
+			productReference = C47150CE28107EBE00F91563 /* DynamicSkyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C4CC8C1B25D74EAA00D9E46D /* DynamicSky */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4CC8C2B25D74EAB00D9E46D /* Build configuration list for PBXNativeTarget "DynamicSky" */;
@@ -258,6 +306,10 @@
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = C4CC8C1B25D74EAA00D9E46D;
 					};
+					C47150CD28107EBE00F91563 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = C4CC8C1B25D74EAA00D9E46D;
+					};
 					C4CC8C1B25D74EAA00D9E46D = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -282,6 +334,7 @@
 			targets = (
 				C4CC8C1B25D74EAA00D9E46D /* DynamicSky */,
 				C47150B728106C2A00F91563 /* DynamicSkyTests */,
+				C47150CD28107EBE00F91563 /* DynamicSkyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -293,6 +346,13 @@
 			files = (
 				C47150C928107D0D00F91563 /* coordinateresponse.json in Resources */,
 				C47150C7281073E200F91563 /* zipresponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47150CC28107EBE00F91563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +400,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C47150CA28107EBE00F91563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47150D328107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift in Sources */,
+				C47150D128107EBE00F91563 /* DynamicSkyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CC8C1825D74EAA00D9E46D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +438,11 @@
 			isa = PBXTargetDependency;
 			target = C4CC8C1B25D74EAA00D9E46D /* DynamicSky */;
 			targetProxy = C47150BC28106C2A00F91563 /* PBXContainerItemProxy */;
+		};
+		C47150D528107EBE00F91563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4CC8C1B25D74EAA00D9E46D /* DynamicSky */;
+			targetProxy = C47150D428107EBE00F91563 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -410,6 +484,44 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicSky.app/DynamicSky";
+			};
+			name = Release;
+		};
+		C47150D728107EBE00F91563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CH8XJS4375;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.derekquinn.DynamicSkyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DynamicSky;
+			};
+			name = Debug;
+		};
+		C47150D828107EBE00F91563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CH8XJS4375;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.derekquinn.DynamicSkyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DynamicSky;
 			};
 			name = Release;
 		};
@@ -586,6 +698,15 @@
 			buildConfigurations = (
 				C47150BF28106C2A00F91563 /* Debug */,
 				C47150C028106C2A00F91563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C47150D628107EBE00F91563 /* Build configuration list for PBXNativeTarget "DynamicSkyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47150D728107EBE00F91563 /* Debug */,
+				C47150D828107EBE00F91563 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
