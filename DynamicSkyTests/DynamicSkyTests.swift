@@ -36,14 +36,14 @@ class DynamicSkyTests: XCTestCase {
             XCTAssertEqual(result.searchResults?.temp, 49.3)
             expectation.fulfill()
         })
-        self.waitForExpectations(timeout: 0.3, handler: .none)
+        self.waitForExpectations(timeout: 1, handler: .none)
         HTTPStubs.removeAllStubs()
     }
 
     func testUserLocationSearch() {
         stub(condition: isHost("api.openweathermap.org")) { _ in
           let stubPath = OHPathForFile("coordinateresponse.json", type(of: self))
-          return fixture(filePath: stubPath!, headers: ["Content-Type":"applicatn"])
+          return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
         }
 
         let expectation = self.expectation(description: "Callback completed successfully")
@@ -54,7 +54,7 @@ class DynamicSkyTests: XCTestCase {
             XCTAssertEqual(result.searchResults?.temp, 48.47)
             expectation.fulfill()
         }
-        self.waitForExpectations(timeout: 0.3, handler: .none)
+        self.waitForExpectations(timeout: 1, handler: .none)
         HTTPStubs.removeAllStubs()
     }
 }
