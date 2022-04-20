@@ -21,16 +21,16 @@ class DynamicSkyTests: XCTestCase {
     }
 
     func testZipCodeSearchMakesRequestWithZipCodeAndDecodesSuccessfulResponse() {
-        let expectedURL = "https://api.openweathermap.org/data/2.5/weather?zip=44720&units=imperial&appid=2110c5dbe3f236eaab3ae14a09f1eeee&countrycode=US"
+        let expectedZip = "44720"
         stub(condition: isHost("api.openweathermap.org")) { request in
-          XCTAssertEqual(expectedURL, request.url!.absoluteString)
+          XCTAssert(request.url!.absoluteString.contains("zip=" + expectedZip))
           let stubPath = OHPathForFile("zipresponse.json", type(of: self))
           return fixture(filePath: stubPath!, headers: ["Content-Type":"application/json"])
         }
 
         let expectation = self.expectation(description: "Callback completed successfully")
 
-        OpenWeatherService.request(.currentWeatherWithZip(zipCode: "44720"), completion: { (result: OpenWeatherSearchResponse) in
+        OpenWeatherService.request(.currentWeatherWithZip(zipCode: expectedZip), completion: { (result: OpenWeatherSearchResponse) in
             
             XCTAssertEqual(result.name, "North Canton")
             XCTAssertEqual(result.searchResults?.temp, 49.3)
