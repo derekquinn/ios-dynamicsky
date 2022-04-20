@@ -13,7 +13,6 @@
 		C47150C7281073E200F91563 /* zipresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C47150C6281073E200F91563 /* zipresponse.json */; };
 		C47150C928107D0D00F91563 /* coordinateresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C47150C828107A6C00F91563 /* coordinateresponse.json */; };
 		C47150D128107EBE00F91563 /* DynamicSkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47150D028107EBE00F91563 /* DynamicSkyUITests.swift */; };
-		C47150D328107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47150D228107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift */; };
 		C4A6DBEC27B7734200404237 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBEB27B7734200404237 /* SearchViewModel.swift */; };
 		C4A6DBF027B779A100404237 /* DailyForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */; };
 		C4A6DBF227B87FB600404237 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */; };
@@ -59,7 +58,6 @@
 		C47150C828107A6C00F91563 /* coordinateresponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coordinateresponse.json; sourceTree = "<group>"; };
 		C47150CE28107EBE00F91563 /* DynamicSkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicSkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47150D028107EBE00F91563 /* DynamicSkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSkyUITests.swift; sourceTree = "<group>"; };
-		C47150D228107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSkyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C4A6DBEB27B7734200404237 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModel.swift; sourceTree = "<group>"; };
 		C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				C47150D028107EBE00F91563 /* DynamicSkyUITests.swift */,
-				C47150D228107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift */,
 			);
 			path = DynamicSkyUITests;
 			sourceTree = "<group>";
@@ -404,7 +401,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C47150D328107EBE00F91563 /* DynamicSkyUITestsLaunchTests.swift in Sources */,
 				C47150D128107EBE00F91563 /* DynamicSkyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
