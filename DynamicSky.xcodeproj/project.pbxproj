@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C47150BB28106C2A00F91563 /* DynamicSkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47150BA28106C2A00F91563 /* DynamicSkyTests.swift */; };
+		C47150C32810734B00F91563 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = C47150C22810734B00F91563 /* OHHTTPStubs */; };
+		C47150C52810734B00F91563 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C47150C42810734B00F91563 /* OHHTTPStubsSwift */; };
+		C47150C7281073E200F91563 /* zipresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C47150C6281073E200F91563 /* zipresponse.json */; };
+		C47150C928107D0D00F91563 /* coordinateresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = C47150C828107A6C00F91563 /* coordinateresponse.json */; };
 		C4A6DBEC27B7734200404237 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBEB27B7734200404237 /* SearchViewModel.swift */; };
 		C4A6DBF027B779A100404237 /* DailyForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */; };
 		C4A6DBF227B87FB600404237 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */; };
@@ -28,7 +33,21 @@
 		C4CC8CE525DB67DE00D9E46D /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC8CE425DB67DE00D9E46D /* ValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C47150BC28106C2A00F91563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4CC8C1425D74EAA00D9E46D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4CC8C1B25D74EAA00D9E46D;
+			remoteInfo = DynamicSky;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C47150B828106C2A00F91563 /* DynamicSkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicSkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47150BA28106C2A00F91563 /* DynamicSkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSkyTests.swift; sourceTree = "<group>"; };
+		C47150C6281073E200F91563 /* zipresponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zipresponse.json; sourceTree = "<group>"; };
+		C47150C828107A6C00F91563 /* coordinateresponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coordinateresponse.json; sourceTree = "<group>"; };
 		C4A6DBEB27B7734200404237 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		C4A6DBEF27B779A100404237 /* DailyForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModel.swift; sourceTree = "<group>"; };
 		C4A6DBF127B87FB500404237 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
@@ -52,21 +71,41 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C47150B528106C2A00F91563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CC8C1925D74EAA00D9E46D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C4CC8C7D25D8E73B00D9E46D /* Kingfisher in Frameworks */,
+				C47150C52810734B00F91563 /* OHHTTPStubsSwift in Frameworks */,
+				C47150C32810734B00F91563 /* OHHTTPStubs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C47150B928106C2A00F91563 /* DynamicSkyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C47150BA28106C2A00F91563 /* DynamicSkyTests.swift */,
+				C47150C6281073E200F91563 /* zipresponse.json */,
+				C47150C828107A6C00F91563 /* coordinateresponse.json */,
+			);
+			path = DynamicSkyTests;
+			sourceTree = "<group>";
+		};
 		C4CC8C1325D74EAA00D9E46D = {
 			isa = PBXGroup;
 			children = (
 				C4CC8C1E25D74EAA00D9E46D /* DynamicSky */,
+				C47150B928106C2A00F91563 /* DynamicSkyTests */,
 				C4CC8C1D25D74EAA00D9E46D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				C4CC8C1C25D74EAA00D9E46D /* DynamicSky.app */,
+				C47150B828106C2A00F91563 /* DynamicSkyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +204,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C47150B728106C2A00F91563 /* DynamicSkyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47150BE28106C2A00F91563 /* Build configuration list for PBXNativeTarget "DynamicSkyTests" */;
+			buildPhases = (
+				C47150B428106C2A00F91563 /* Sources */,
+				C47150B528106C2A00F91563 /* Frameworks */,
+				C47150B628106C2A00F91563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C47150BD28106C2A00F91563 /* PBXTargetDependency */,
+			);
+			name = DynamicSkyTests;
+			productName = DynamicSkyTests;
+			productReference = C47150B828106C2A00F91563 /* DynamicSkyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C4CC8C1B25D74EAA00D9E46D /* DynamicSky */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4CC8C2B25D74EAB00D9E46D /* Build configuration list for PBXNativeTarget "DynamicSky" */;
@@ -180,6 +238,8 @@
 			name = DynamicSky;
 			packageProductDependencies = (
 				C4CC8C7C25D8E73B00D9E46D /* Kingfisher */,
+				C47150C22810734B00F91563 /* OHHTTPStubs */,
+				C47150C42810734B00F91563 /* OHHTTPStubsSwift */,
 			);
 			productName = DynamicSky;
 			productReference = C4CC8C1C25D74EAA00D9E46D /* DynamicSky.app */;
@@ -191,9 +251,13 @@
 		C4CC8C1425D74EAA00D9E46D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					C47150B728106C2A00F91563 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = C4CC8C1B25D74EAA00D9E46D;
+					};
 					C4CC8C1B25D74EAA00D9E46D = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -210,17 +274,28 @@
 			mainGroup = C4CC8C1325D74EAA00D9E46D;
 			packageReferences = (
 				C4CC8C7B25D8E73B00D9E46D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C47150C12810734B00F91563 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = C4CC8C1D25D74EAA00D9E46D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C4CC8C1B25D74EAA00D9E46D /* DynamicSky */,
+				C47150B728106C2A00F91563 /* DynamicSkyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C47150B628106C2A00F91563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47150C928107D0D00F91563 /* coordinateresponse.json in Resources */,
+				C47150C7281073E200F91563 /* zipresponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CC8C1A25D74EAA00D9E46D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +332,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C47150B428106C2A00F91563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47150BB28106C2A00F91563 /* DynamicSkyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CC8C1825D74EAA00D9E46D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,7 +364,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C47150BD28106C2A00F91563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4CC8C1B25D74EAA00D9E46D /* DynamicSky */;
+			targetProxy = C47150BC28106C2A00F91563 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C47150BF28106C2A00F91563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CH8XJS4375;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.derekquinn.DynamicSkyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicSky.app/DynamicSky";
+			};
+			name = Debug;
+		};
+		C47150C028106C2A00F91563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CH8XJS4375;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.derekquinn.DynamicSkyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicSky.app/DynamicSky";
+			};
+			name = Release;
+		};
 		C4CC8C2925D74EAB00D9E46D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -450,6 +581,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C47150BE28106C2A00F91563 /* Build configuration list for PBXNativeTarget "DynamicSkyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47150BF28106C2A00F91563 /* Debug */,
+				C47150C028106C2A00F91563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4CC8C1725D74EAA00D9E46D /* Build configuration list for PBXProject "DynamicSky" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -471,6 +611,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C47150C12810734B00F91563 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		C4CC8C7B25D8E73B00D9E46D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -482,6 +630,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C47150C22810734B00F91563 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C47150C12810734B00F91563 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		C47150C42810734B00F91563 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C47150C12810734B00F91563 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
 		C4CC8C7C25D8E73B00D9E46D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C4CC8C7B25D8E73B00D9E46D /* XCRemoteSwiftPackageReference "Kingfisher" */;

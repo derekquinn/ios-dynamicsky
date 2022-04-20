@@ -1,0 +1,43 @@
+{
+  "coord": {
+    "lon": -81.3784,
+    "lat": 40.7989
+  },
+  "weather": [
+    {
+      "id": 802,
+      "main": "Clouds",
+      "description": "scattered clouds",
+      "icon": "03d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 49.3,
+    "feels_like": 45.45,
+    "temp_min": 45.93,
+    "temp_max": 51.8,
+    "pressure": 1030,
+    "humidity": 55
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 9.22,
+    "deg": 180
+  },
+  "clouds": {
+    "all": 40
+  },
+  "dt": 1650474430,
+  "sys": {
+    "type": 2,
+    "id": 2034334,
+    "country": "US",
+    "sunrise": 1650451134,
+    "sunset": 1650499770
+  },
+  "timezone": -14400,
+  "id": 0,
+  "name": "North Canton",
+  "cod": 200
+}
