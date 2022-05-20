@@ -1,5 +1,5 @@
 # DynamicSky iOS Application 0.0.3 (SwiftUI)
-_DynamicSky is a simple and fast weather application for iOS versions 13 and above._
+_DynamicSky is a simple and fast weather application for iOS versions 14 and above._
 
 ## Features 
 - Current weather view with local temperature and feels like temperature. 
